@@ -1,3 +1,7 @@
+/**
+ * Создание и обработка транспортных карточек
+ * @type {Function}
+ */
 var TransportCards = module.exports = function() {
 
 	/**
@@ -7,6 +11,9 @@ var TransportCards = module.exports = function() {
 	 * @constructor
 	 */
 	var Card = function(data) {
+		this.departure = null;
+		this.arrival = null;
+
 		for (var n in data) {
 			if (data.hasOwnProperty(n)) {
 				this[n] = data[n];
@@ -22,8 +29,6 @@ var TransportCards = module.exports = function() {
 		Card.apply(this, arguments);
 	};
 	CardBus.prototype = {
-		departure: 	null,
-		arrival: null,
 		number: null,
 		seat: null
 	};
@@ -39,8 +44,6 @@ var TransportCards = module.exports = function() {
 		Card.apply(this, arguments);
 	};
 	CardPlane.prototype = {
-		departure: null,
-		arrival: null,
 		flightNumber: null,
 		gate: null,
 		seat: null,
@@ -58,8 +61,6 @@ var TransportCards = module.exports = function() {
 		Card.apply(this, arguments);
 	};
 	CardTrain.prototype = {
-		departure: null,
-		arrival: null,
 		trainNumber: null,
 		platform: null,
 		way: null,
