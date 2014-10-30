@@ -36,7 +36,7 @@ var TransportCards = module.exports = function() {
 	 * @constructor
 	 */
 	var CardPlane = function() {
-		return Card.apply(this, arguments);
+		Card.apply(this, arguments);
 	};
 	CardPlane.prototype = {
 		departure: null,
